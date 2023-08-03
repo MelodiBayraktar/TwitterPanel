@@ -1,5 +1,5 @@
 import * as React from "react";
-import SideNav from "./components/SideNav";
+import SideNav from "./components/Layout/SideNav";
 import Home from "./pages/Home";
 import Box from "@mui/material/Box";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";

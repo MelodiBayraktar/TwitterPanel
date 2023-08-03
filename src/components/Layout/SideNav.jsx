@@ -21,10 +21,10 @@ const drawerWidth = 220;
 const StyledNavLink = styled(NavLink)(({ theme }) => ({
   color: "#454654", // Text rengi
   textDecoration: "none",
-  fontWeight:"bold",
-  textTransform:"uppercase",
-  marginLeft: '8px',
-  display:"flex", // Alt çizgiyi kaldırmak için
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  textAlign: "center",
+  display: "flex", 
   "&.active": {
     color: "#1B76D2",
   },
@@ -60,7 +60,17 @@ function SideNav(props) {
 
   const drawer = (
     <div>
-      <Typography variant="h5" sx={{ pl: 7, py: 2 ,backgroundColor:'#1B76D2',color:'white'}}>
+      <Typography
+        variant="h5"
+        sx={{
+          py: 2,
+          pl:1,
+          backgroundColor: "#1B76D2",
+          color: "white",
+          fontWeight: "bold",
+          textAlign: "center",
+        }}
+      >
         Welcome{" "}
       </Typography>
       <Divider />
@@ -68,10 +78,11 @@ function SideNav(props) {
         {sidebars.map((item, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton>
-              <StyledNavLink to={item.to} > 
-              <Box><ListItemIcon>{item.icon}</ListItemIcon></Box>
+              <StyledNavLink to={item.to}>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <ListItemIcon>{item.icon}</ListItemIcon>
+                </Box>
                 <Box>{item.name}</Box>
-                {/* <ListItemText primary={item.name} /> */}
               </StyledNavLink>
             </ListItemButton>
           </ListItem>
