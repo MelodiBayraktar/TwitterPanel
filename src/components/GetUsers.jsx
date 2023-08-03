@@ -1,13 +1,12 @@
 import { usersMockData } from "../_mock/users/";
 import React, { useEffect, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
-import UsersTable from "./UsersTable";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import { DataGrid, GridActionsCellItem } from "@mui/x-data-grid";
 import { Paper } from "@mui/material";
 import { Visibility as VisibilityIcon } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom"; // useNavigate'i import etmeyi unutmayın
+import { useNavigate } from "react-router-dom";
 
 function GetUsers() {
   const [users, setUsers] = useState([]);
@@ -42,11 +41,10 @@ function GetUsers() {
         type: "actions",
         width: 80,
         getActions: (params) => [
-          // eslint-disable-next-line react/jsx-key
           <GridActionsCellItem
             label="View"
             icon={<VisibilityIcon />}
-            onClick={() => navigateToUser(params.id)} // Burada useNavigate kullanarak yönlendirme yapın
+            onClick={() => navigateToUser(params.id)}
           />,
         ],
       },
@@ -54,7 +52,7 @@ function GetUsers() {
     []
   );
 
-  const navigate = useNavigate(); // useHistory'i useNavigate ile değiştirin
+  const navigate = useNavigate();
   const navigateToUser = (id) => {
     navigate(`/users/${id}`);
   };
@@ -62,11 +60,16 @@ function GetUsers() {
   return (
     <div>
       {loading ? (
-        <CircularProgress
-          color="primary"
-          size={80}
-          thickness={5}
-        />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+          }}
+        >
+          <CircularProgress color="primary" size={150} thickness={5} />
+        </Box>
       ) : (
         <Paper sx={{ width: "100%" }}>
           <DataGrid
@@ -80,7 +83,6 @@ function GetUsers() {
           />
         </Paper>
       )}
-    
     </div>
   );
 }
