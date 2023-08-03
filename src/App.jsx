@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Box from "@mui/material/Box";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
+import GetUsers from "./components/GetUsers";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Home/>} />
+            <Route path="/users" element={<GetUsers/>} />
             <Route path="*" element={<ErrorPage/>} />
           </Routes>
         </Box>
