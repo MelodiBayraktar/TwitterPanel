@@ -1,12 +1,27 @@
 // Home.js
-import React from 'react';
-import Box from '@mui/material/Box';
+import React from "react";
+import Box from "@mui/material/Box";
+import BarChart from "../components/Charts/BarChart";
+import DonutChart from "../components/Charts/DonutChart";
+import AreaChart from "../components/Charts/AreaChart";
 
 const Home = () => {
   return (
-    <Box sx={{ height: '500px' }}> {/* Örnek olarak 500 piksel yükseklik veriyoruz */}
+    <Box sx={{ minHeightheight: "800px" }}>
+      {" "}
+      {/* Örnek olarak 500 piksel yükseklik veriyoruz */}
       {/* Burada diğer içeriğinizi ekleyin */}
-      <h2>selam</h2>
+      <Box>
+        <BarChart />
+      </Box>
+      <Box>
+        {" "}
+        <DonutChart />{" "}
+      </Box>
+      <Box>
+        {" "}
+        <AreaChart />{" "}
+      </Box>
     </Box>
   );
 };

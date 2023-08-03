@@ -8,7 +8,7 @@ function App() {
     <Box sx={{ display: 'flex' }}>
     {/* SideNav bileşeni */}
     <SideNav />
-    <Box component="main" sx={{ flexGrow: 1, p: 5, overflowY: 'auto' ,m:2}}>
+    <Box component="main" sx={{ flexGrow: 1, p: 8, overflowY: 'auto' ,m:2}}>
       {/* Diğer bileşenler */}
      
       <Home/>
