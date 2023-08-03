@@ -13,9 +13,25 @@ import Typography from "@mui/material/Typography";
 import ArtTrackIcon from "@mui/icons-material/ArtTrack";
 import GroupIcon from "@mui/icons-material/Group";
 import EmailIcon from "@mui/icons-material/Email";
+import { NavLink } from "react-router-dom";
+import { styled } from "@mui/material/styles";
 
 const drawerWidth = 220;
 
+const StyledNavLink = styled(NavLink)(({ theme }) => ({
+  color: "#454654", // Text rengi
+  textDecoration: "none",
+  fontWeight:"bold",
+  textTransform:"uppercase",
+  marginLeft: '8px',
+  display:"flex", // Alt çizgiyi kaldırmak için
+  "&.active": {
+    color: "#1B76D2",
+  },
+  "& .MuiListItemIcon-root": {
+    color: "#1B76D2", // İkonları mavi yapmak için
+  },
+}));
 function SideNav(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -28,20 +44,23 @@ function SideNav(props) {
     {
       name: "Dashboard",
       icon: <ArtTrackIcon />,
+      to: "/",
     },
     {
       name: "Users",
       icon: <GroupIcon />,
+      to: "/users",
     },
     {
       name: "Last Tweets",
       icon: <EmailIcon />,
+      to: "/last-tweets",
     },
   ];
 
   const drawer = (
     <div>
-      <Typography variant="h5" sx={{ pl: 7, py: 2 }}>
+      <Typography variant="h5" sx={{ pl: 7, py: 2 ,backgroundColor:'#1B76D2',color:'white'}}>
         Welcome{" "}
       </Typography>
       <Divider />
@@ -49,8 +68,11 @@ function SideNav(props) {
         {sidebars.map((item, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.name} />
+              <StyledNavLink to={item.to} > 
+              <Box><ListItemIcon>{item.icon}</ListItemIcon></Box>
+                <Box>{item.name}</Box>
+                {/* <ListItemText primary={item.name} /> */}
+              </StyledNavLink>
             </ListItemButton>
           </ListItem>
         ))}
