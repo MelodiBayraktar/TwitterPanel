@@ -22,37 +22,32 @@ function GetUsers() {
       setLoading(false);
     }, 1000);
   };
-
-  const columns =[
-      { field: "id", headerName: "ID", width: 90 },
-      {
-        field: "name",
-        flex: 1,
-        headerName: "First name",
-      },
-      {
-        field: "lastname",
-        flex: 1,
-        headerName: "Last name",
-      },
-      {
-        field: "actions",
-        type: "actions",
-        width: 80,
-        getActions: (params) => [
-          <GridActionsCellItem
-            label="View"
-            icon={<VisibilityIcon />}
-            onClick={() => navigateToUser(params.id)}
-          />,
-        ],
-      },
-    ]
- 
   const navigate = useNavigate();
-  const navigateToUser = (id) => {
-    navigate(`/users/${id}`);
-  };
+  const columns = [
+    { field: "id", headerName: "ID", width: 90 },
+    {
+      field: "name",
+      flex: 1,
+      headerName: "First name",
+    },
+    {
+      field: "lastname",
+      flex: 1,
+      headerName: "Last name",
+    },
+    {
+      field: "actions",
+      type: "actions",
+      width: 80,
+      getActions: (params) => [
+        <GridActionsCellItem
+          label="View"
+          icon={<VisibilityIcon />}
+          onClick={() => navigate(`/users/${params.id}`)}
+        />,
+      ],
+    },
+  ];
 
   return (
     <div>
