@@ -23,8 +23,7 @@ function GetUsers() {
     }, 1000);
   };
 
-  const columns = React.useMemo(
-    () => [
+  const columns =[
       { field: "id", headerName: "ID", width: 90 },
       {
         field: "name",
@@ -48,10 +47,8 @@ function GetUsers() {
           />,
         ],
       },
-    ],
-    []
-  );
-
+    ]
+ 
   const navigate = useNavigate();
   const navigateToUser = (id) => {
     navigate(`/users/${id}`);
