@@ -7,10 +7,8 @@ import AreaChart from "../components/Charts/AreaChart";
 
 const Home = () => {
   return (
-    <Box sx={{ minHeightheight: "800px" }}>
-      {" "}
-      {/* Örnek olarak 500 piksel yükseklik veriyoruz */}
-      {/* Burada diğer içeriğinizi ekleyin */}
+    <Box sx={{ minHeight: "800px" }}>
+
       <Box>
         <BarChart />
       </Box>

@@ -1,21 +1,20 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Header from "./Header";
-import Typography from "@mui/material/Typography";
-import ArtTrackIcon from "@mui/icons-material/ArtTrack";
-import GroupIcon from "@mui/icons-material/Group";
-import EmailIcon from "@mui/icons-material/Email";
-import { NavLink } from "react-router-dom";
+import {
+  CssBaseline,
+  Box,
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  Typography,
+} from "@mui/material";
+import { ArtTrackIcon, GroupIcon, EmailIcon } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
+import Header from "./Header";
 
+import { NavLink } from "react-router-dom";
 const drawerWidth = 220;
 
 const StyledNavLink = styled(NavLink)(({ theme }) => ({
@@ -24,7 +23,7 @@ const StyledNavLink = styled(NavLink)(({ theme }) => ({
   fontWeight: "bold",
   textTransform: "uppercase",
   textAlign: "center",
-  display: "flex", 
+  display: "flex",
   "&.active": {
     color: "#1B76D2",
   },
@@ -64,7 +63,7 @@ function SideNav(props) {
         variant="h5"
         sx={{
           py: 2,
-          pl:1,
+          pl: 1,
           backgroundColor: "#1B76D2",
           color: "white",
           fontWeight: "bold",

@@ -6,8 +6,7 @@ function MessageCard({ message }) {
 
   return (
     <Grid item xs={12}>
-  
-      <Paper sx={{ p: 2, m: 1, bgcolor: "#f5f5f5" }}>
+      <Paper sx={{ p: 2, m: 1, bgcolor: "#f5f5f5", boxShadow: "none" }}>
         <Typography>{message.message}</Typography>
       </Paper>
     </Grid>

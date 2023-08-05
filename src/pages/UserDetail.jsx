@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { usersMockData } from "../_mock/users";
 import { tweetsMockData } from "../_mock/tweets";
 import { Avatar, Card, CardContent, Typography,Grid,Paper } from "@mui/material";
-import MessageCard from "./MessageCard";
+import MessageCard from "../components/MessageCard";
 
 function UserDetail() {
   const { id } = useParams();
