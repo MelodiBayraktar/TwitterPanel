@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import Users from "./pages/Users";
 import UserDetail from "./components/UserDetail";
+import LastMessages from "./components/LastMessages";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/users" element={<Users/>} />
             <Route path="/users/:id" element={<UserDetail/>} />
-            <Route path="*" element={<ErrorPage/>} />
+            <Route path="/users/:id" element={<UserDetail/>} />
+            <Route path="/last-messages" element={<LastMessages/>} />
           </Routes>
         </Box>
       </Box>

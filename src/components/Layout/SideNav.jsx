@@ -52,9 +52,9 @@ function SideNav(props) {
       to: "/users",
     },
     {
-      name: "Last Tweets",
+      name: "Last Messages",
       icon: <EmailIcon />,
-      to: "/last-tweets",
+      to: "/last-messages",
     },
   ];
 

@@ -2,8 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { usersMockData } from "../_mock/users";
 import { tweetsMockData } from "../_mock/tweets";
-import { Avatar, Card, CardContent, Typography } from "@mui/material";
-import { Box, ButtonBase, Unstable_Grid2 as Grid, Paper } from "@mui/material";
+import { Avatar, Card, CardContent, Typography,Grid,Paper } from "@mui/material";
 import MessageCard from "./MessageCard";
 
 function UserDetail() {
@@ -60,7 +59,18 @@ function UserDetail() {
       <Typography variant="h5" sx={{ my: 2 }}>
         User's Messages
       </Typography>
-      <MessageCard userMessages={userMessages}/>
+      {userMessages.length > 0 ? (
+        userMessages.map((message)=>(
+          <MessageCard message={message} />
+        ))
+        
+      ) : (
+        <Grid item xs={12}>
+          <Paper sx={{ p: 2, m: 1, bgcolor: "#f5f5f5" }}>
+            <Typography>No message...</Typography>
+          </Paper>
+        </Grid>
+      )}
     </>
   );
 }
