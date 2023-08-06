@@ -62,7 +62,7 @@ function GetUsers() {
           <CircularProgress color="primary" size={150} thickness={5} />
         </Box>
       ) : (
-        <Paper sx={{ width: "100%" }}>
+        <Paper >
           <DataGrid
             rows={users.map((item) => ({
               id: item.id,

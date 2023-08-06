@@ -10,10 +10,11 @@ import {
   ListItemIcon,
   Typography,
 } from "@mui/material";
-import { ArtTrackIcon, GroupIcon, EmailIcon } from "@mui/icons-material";
+import   GroupIcon   from "@mui/icons-material/Group";
 import { styled } from "@mui/material/styles";
 import Header from "./Header";
-
+import ArtTrackIcon from '@mui/icons-material/ArtTrack';
+import EmailIcon from '@mui/icons-material/Email';
 import { NavLink } from "react-router-dom";
 const drawerWidth = 220;
 
@@ -111,7 +112,7 @@ function SideNav(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -127,8 +128,8 @@ function SideNav(props) {
           variant="permanent"
           sx={{
             display: { xs: "none", sm: "block" },
-            width: drawerWidth, // Set the width explicitly
-            flexShrink: 0, // Add this to prevent shrinking
+            width: drawerWidth, 
+            flexShrink: 0, 
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -139,6 +140,7 @@ function SideNav(props) {
           {drawer}
         </Drawer>
       </Box>
+   
     </Box>
   );
 }

@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import SideNav from "./components/Layout/SideNav";
 import Home from "./pages/Home";
 import Box from "@mui/material/Box";
@@ -7,16 +7,14 @@ import ErrorPage from "./pages/ErrorPage";
 import Users from "./pages/Users";
 import UserDetail from "./pages/UserDetail";
 import LastMessages from "./pages/LastMessages";
-
+import { LoginForm } from "./components/LoginForm";
+import Layout from "./components/Layout/Layout";
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
     <Router>
-      <Box sx={{ display: "flex" }}>
-        <SideNav />{" "}
-        <Box
-          component="main"
-          sx={{ flexGrow: 1, p: 8, overflowY: "auto", m: 2 }}
-        >
+      {isAuthenticated ? (
+        <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/users" element={<Users />} />
@@ -24,8 +22,10 @@ function App() {
             <Route path="/last-messages" element={<LastMessages />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </Box>
-      </Box>
+        </Layout>
+      ) : (
+        <LoginForm onLogin={() => setIsAuthenticated(true)} />
+      )}
     </Router>
   );
 }
