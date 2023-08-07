@@ -9,7 +9,7 @@ Bu proje, **Vite** altyapılı bir **React** uygulamasıdır	:electron:
 
 Projenin amacı, giriş yapmış bir kullanıcının dashboard ekranını görüntülemesi, kullanıcıların mesajlarını listeleyebilmesi ve ilgili kullanıcının detaylarına erişebilmesidir.
 
-Projede, tasarım kütüphanesi olarak **Material UI** kullanılmış olup, Anasayfadaki grafikler için **ApexChart** kütüphanesi, login olan kullanıcı detaylarını tutmak için de **Jotai** kütüphanesi kullanılmıştır
+Projede, tasarım kütüphanesi olarak **Material UI** kullanılmış olup, anasayfadaki grafikler için **ApexChart** kütüphanesi, login olan kullanıcı detaylarını tutmak için de **Jotai** kütüphanesi, routing yapısında ise **React-Router-Dom** kütüphanesi kullanılmıştır
 
 ## Projenin farklı cihazlardaki görüntüsü şu şekildedir :sparkles: :
 
