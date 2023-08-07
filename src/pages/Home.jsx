@@ -6,7 +6,7 @@ import AreaChart from "../components/Charts/AreaChart";
 import { LoginForm } from "../components/LoginForm";
 import { useAtom } from "jotai";
 import { authAtom } from "../auth";
-import { useNavigate } from "react-router-dom";
+
 const Home = () => {
   
   const [auth] = useAtom(authAtom);
