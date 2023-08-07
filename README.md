@@ -24,15 +24,15 @@ Projede, tasarım kütüphanesi olarak **Material UI** kullanılmış olup, Anas
 
 3. Komut satırında proje klasörüne gidin:
 
-`cd vite-project`
+⋅⋅* `cd vite-project`
 
 4. Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın:
 
-`npm install`
+⋅⋅* `npm install`
 
 5. Projeyi çalıştırmak için de şu komutu kullanınız:
 
-`npm run dev`
+⋅⋅* `npm run dev`
 
 
 ### Kullanılan Teknolojiler ve Paketler	:hammer:
