@@ -11,12 +11,36 @@ Projenin amacı, giriş yapmış bir kullanıcının dashboard ekranını görü
 
 Projede, tasarım kütüphanesi olarak **Material UI** kullanılmış olup, Anasayfadaki grafikler için **ApexChart** kütüphanesi, login olan kullanıcı detaylarını tutmak için de **Jotai** kütüphanesi kullanılmıştır
 
-## Proje şu şekildedir :sparkles:
+## Projenin farklı cihazlardaki görüntüsü şu şekildedir :sparkles: :
+
+### Bilgisayar ekranlarında :desktop_computer: :
+
+
+
+https://github.com/MelodiBayraktar/TwitterPanel/assets/101207246/d04a6ca4-6bfa-4e81-8beb-efce9af6e940
+
+
+
+### Tablet ekranlarında :pager: :
+
+
+
+https://github.com/MelodiBayraktar/TwitterPanel/assets/101207246/fe5ce598-3536-44bd-9237-626ebf1c641d
+
+
+
+### Mobil cihazların ekranlarında :iphone: :
+
+
+
+https://github.com/MelodiBayraktar/TwitterPanel/assets/101207246/c83e6f9f-d075-4bec-b601-efe801b988ec
+
+
 
 
 ### Gereksinimler:heavy_check_mark:
 
-* Projeyi localde çalıştırmak için aşağıdaki adımları takip etmelisiniz	:key: :
+#### Projeyi localde çalıştırmak için aşağıdaki adımları takip etmelisiniz	:key: :
 
 1. Node.js ve npm kurulu olmalıdır.
 
@@ -24,15 +48,15 @@ Projede, tasarım kütüphanesi olarak **Material UI** kullanılmış olup, Anas
 
 3. Komut satırında proje klasörüne gidin:
 
-⋅⋅* `cd vite-project`
+    `cd vite-project`
 
 4. Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın:
 
-⋅⋅* `npm install`
+    `npm install`
 
 5. Projeyi çalıştırmak için de şu komutu kullanınız:
 
-⋅⋅* `npm run dev`
+    `npm run dev`
 
 
 ### Kullanılan Teknolojiler ve Paketler	:hammer:
