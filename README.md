@@ -37,20 +37,20 @@ Projede, tasarım kütüphanesi olarak **Material UI** kullanılmış olup, Anas
 
 ### Kullanılan Teknolojiler ve Paketler	:hammer:
 
-- React: ^18.2.0
-* React Router DOM: ^6.14.2
-+ Vite: ^4.4.5
+- React: 18.2.0
+- React Router DOM: 6.14.2
+- Vite: 4.4.5
 
-- Material-UI: ^5.14.3
-* @emotion/react: ^11.11.1
-+ @emotion/styled: ^11.11.0
-- @fontsource/roboto: ^5.0.5
-* @mui/icons-material: ^5.14.3
-+ @mui/x-data-grid: ^6.10.2
+- Material-UI: 5.14.3
+- @emotion/react: 11.11.1
+- @emotion/styled: 11.11.0
+- @fontsource/roboto: 5.0.5
+- @mui/icons-material: 5.14.3
+- @mui/x-data-grid: 6.10.2
 
-- Jotai: ^2.2.3
-* React ApexCharts: ^1.4.1
-+ ApexCharts: ^3.41.1
+- Jotai: 2.2.3
+- React ApexCharts: 1.4.1
+- ApexCharts: 3.41.1
 
 
 
